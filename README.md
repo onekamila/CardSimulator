@@ -39,6 +39,13 @@ Then, the randomly chooses which half to pick from, the first (or "top") half, o
 Now you're probably wondering to yourself: *why go through all this trouble, rather than simply randomizing the deck?* This is a valid question, and makes total sense. \
 The reason I took the approach outlined above is because it closely resembles how a deck of cards is shuffled in real-life. The shuffler first splits the deck in half, then arches both halves, slowly releasing cards one-by-one back into the pile and then recombining all the cards into one deck of cards. However, the cards are released asynchonously. In other words, a card from the one half is not immediately followed by a card from the other. Rather, a number of cards can be released from one half before a card from the other deck is released. This further randomizes the cards, as the order cannot be predicted.
 
+### Next Steps
+I plan to at least do the following to this project:
+* Make this an object-oriented project
+* Translate to Java
+* Add graphics
+* (*Maybe*) Add a GUI for this
+
 ## Credits
 All code written by Garrett Kamila Crayton. \
 For any questions, please email me: <garrett.crayton@gmail.com>
