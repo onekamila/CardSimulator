@@ -1,13 +1,11 @@
 """Simulates shuffling a standard deck of playing cards in a realistic manner.
 
 Simulates shuffling a standard deck of playing cards in a realistic manner.
-
-
 """
 
 # Title: CardSimulator
 # Author: Garrett Kamila Crayton
-# Date: 2021 April 6
+# Date: 2021 April 10
 # Version: 1.0
 # Description: Simulates shuffling a deck of playing cards in a realistic manner
 
@@ -82,8 +80,6 @@ def shuffleDeck(deck: list) -> list:
 
     Returns:
         The shuffled deck of cards
-
-
     """
 
     middle = random.randint(20, 32)
