@@ -1,3 +1,10 @@
+"""Simulates shuffling a standard deck of playing cards in a realistic manner.
+
+Simulates shuffling a standard deck of playing cards in a realistic manner.
+
+
+"""
+
 # Title: CardSimulator
 # Author: Garrett Kamila Crayton
 # Date: 2021 April 6
@@ -17,7 +24,7 @@ suitLists = [spades, diamonds, clubs, hearts]
 deck = []
 
 
-def init():
+def __init__():
     global deck
 
     for i in range(0, 4):
@@ -31,7 +38,21 @@ def init():
         deck += currentSuit
 
 
-def recombineDeck(leftHalf, rightHalf):
+def recombineDeck(leftHalf: list, rightHalf: list) -> list:
+    """
+    Recombine the split deck. 
+    Randomly chooses between the left or right half, and adds the bottom card of the chosen half to the top of the new "deck". This repeats until one half is depleted, at which point the other half is added to the top of the new deck.
+    
+    Args:
+        leftHalf: str
+            one of the two halves of the original deck
+        rightHalf: str
+            the other half of the original deck
+
+    Returns:
+        The recombined deck
+    """
+
     shuffledDeck = []
 
     while((len(leftHalf) != 0) and (len(rightHalf) != 0)):
@@ -49,7 +70,22 @@ def recombineDeck(leftHalf, rightHalf):
     
     return shuffledDeck
 
-def shuffleDeck(deck):
+def shuffleDeck(deck: list) -> list:
+    """
+    Shuffles the given deck of cards in a realistic manner.
+
+    Splits the deck into two halves, each of slightly different sizes, then calls `recombineDeck()`. 
+
+    Args:
+        deck: list
+            the deck of cards to be shuffled
+
+    Returns:
+        The shuffled deck of cards
+
+
+    """
+
     middle = random.randint(20, 32)
     topHalf = deck[0:middle]
     bottomHalf = deck[middle:]
@@ -68,5 +104,10 @@ def main():
 
 
 if __name__ == "__main__":
-    init()
+    __init__()
     main()
+
+__author__ = "Garrett Kamila Crayton (garrett.crayton@gmail.com)"
+__date__ = "2021 April 10"
+__credits__ = "Garrett Kamila Crayton (garrett.crayton@gmail.com)"
+__version__ = "1.0"
