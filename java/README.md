@@ -1,4 +1,4 @@
-# CardSimulator (Java)
+# CardSimulator
 CardSimulator is a computer simulation attempting to model shuffling a deck of cards in a realistic fashion.
 
 ## Running the Simulator
