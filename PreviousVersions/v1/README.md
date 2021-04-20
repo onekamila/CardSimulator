@@ -2,7 +2,7 @@
 CardSimulator is a computer simulation attempting to model shuffling a deck of cards in a realistic manner. 
 
 ## Running the Simulator
-*version 2.0* In order to run this program, simply run this code within Python. 
+*version 1.0* In order to run this program, simply run this code within Python. 
 ```powershell
 > python CardSimulator.py
 ['♠A', '♠2', '♠3', '♠4', '♠5', '♠6', '♠7', '♠8', '♠9', '♠10', '♠J', '♠Q', '♠K', '♦A', '♦2', '♦3', '♦4', '♦5', '♦6', '♦7', '♦8', '♦9', '♦10', '♦J', '♦Q', '♦K', '♣A', '♣2', '♣3', '♣4', '♣5', '♣6', '♣7', '♣8', '♣9', '♣10', '♣J', '♣Q', '♣K', '♥A', '♥2', '♥3', '♥4', '♥5', '♥6', '♥7', '♥8', '♥9', '♥10', '♥J', '♥Q', '♥K']
@@ -41,6 +41,7 @@ The reason I took the approach outlined above is because it closely resembles ho
 
 ### Next Steps
 I plan to at least do the following to this project:
+* Make this an object-oriented project
 * Translate to Java
 * Add graphics
 * (*Maybe*) Add a GUI for this
