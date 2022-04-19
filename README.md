@@ -1,5 +1,5 @@
-[3]
-[4]
+![3]
+![4]
 
 
 # Card Simulator
@@ -38,5 +38,5 @@ For any questions, please email me: [garrett.crayton@gmail.com][1]
 
 [1]: mailto:garrett.crayton@gmail.com
 [2]: https://en.wikipedia.org/wiki/User:Cburnett
-[3]: https://img.shields.io/github/license/onekamila/CardSimulator
+[3]: https://img.shields.io/github/license/onekamila/CardSimulator?label=MIT
 [4]: https://img.shields.io/github/v/release/onekamila/CardSimulator
