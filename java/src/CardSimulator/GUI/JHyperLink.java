@@ -33,6 +33,4 @@ public class JHyperLink extends JLabel
 
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
     }
-
-
 }

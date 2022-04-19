@@ -1,5 +1,6 @@
 package CardSimulator.GUI;
 
+
 import CardSimulator.CardDeck.CardDeck;
 
 import javax.imageio.ImageIO;
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 
 /**
@@ -36,13 +38,13 @@ public class GUI implements ActionListener
      * @param cardDeck the <code>CardSimulator.CardSimulator.CardDeck</code> that will be used
      * @throws IOException
      */
-    public GUI(CardDeck cardDeck) throws IOException
+    public GUI(CardDeck cardDeck) throws IOException, URISyntaxException
     {
         createGUI(cardDeck);
     }
 
 
-    private void createGUI(CardDeck cardDeck) throws IOException
+    private void createGUI(CardDeck cardDeck) throws IOException, URISyntaxException
     {
         // Create the main layout panel
         mainPanel = new JPanel(new GridBagLayout());
@@ -94,7 +96,7 @@ public class GUI implements ActionListener
         mainPanel.add(cardPanel, constraints);
 
         // Create the main window
-        window = new JFrame("CardSimulator.CardSimulator.CardDeck.Card Simulator");
+        window = new JFrame("Card Simulator");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Add everything to the main window
@@ -111,7 +113,7 @@ public class GUI implements ActionListener
     {
         ImageIcon infoIcon;
 
-        String iconPath = '.' + File.separator + "images" + File.separator + "InfoIcon.png";
+        String iconPath = ImageReader.imagePath + File.separator + "InfoIcon.png";
         infoIcon = new ImageIcon(iconPath);
 
         JButton button = new JButton(infoIcon);
@@ -127,7 +129,7 @@ public class GUI implements ActionListener
     {
         try
         {
-            String imagePath = '.' + File.separator + "images" + File.separator + "spades" + File.separator + "king.png";
+            String imagePath = ImageReader.imagePath + File.separator + "spades" + File.separator + "king.png";
             File imageFile = new File(imagePath);
 
             BufferedImage originalImage = ImageIO.read(imageFile);
@@ -151,6 +153,7 @@ public class GUI implements ActionListener
         window.pack();
     }
 
+    
     /**
      * Display the CardSimulator.CardSimulator.GUI
      */

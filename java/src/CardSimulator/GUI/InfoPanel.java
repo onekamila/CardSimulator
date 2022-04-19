@@ -23,11 +23,11 @@ public class InfoPanel extends JPanel
      *
      *
      * (King of Spades on side)
-     * Title: Card Deck Simulator
+     * Title: Card Simulator
      * Author: Garrett Kamila Crayton (*link to Personal Site*)
      * Created: 2021 July 20
      * Version: 1.0.0 (*link to Git*)
-     * License: GNU General Use License
+     * License: MIT License
      * Copyright © 2021 Garrett Kamila Crayton (*link to Personal Site*)
      * Images © 2007 Dr. Colin M.L. Burnett (*link to Dr. Burnett wiki page*)
      */
@@ -180,7 +180,7 @@ public class InfoPanel extends JPanel
 
         try
         {
-            String imagePath = '.' + File.separator + "images" + File.separator + "spades" + File.separator + "king.png";
+            String imagePath = ImageReader.imagePath + File.separator + "spades" + File.separator + "king.png";
             File imageFile = new File(imagePath);
 
             BufferedImage originalImage = ImageIO.read(imageFile);
@@ -192,7 +192,7 @@ public class InfoPanel extends JPanel
         }
         catch(IOException e)
         {
-            String iconPath = '.' + File.separator + "images" + File.separator + "InfoIcon-Large.png";
+            String iconPath = ImageReader.imagePath + File.separator + "InfoIcon-Large.png";
             ImageIcon icon = new ImageIcon(iconPath);
             iconLabel.setIcon(icon);
         }
@@ -211,17 +211,17 @@ public class InfoPanel extends JPanel
 
     private void createLabels()
     {
-        titleLabel = new JLabel("Card Deck Simulator");
-        dateLabel = new JLabel("2021 August 24");
-        licenseLabel = new JLabel("GNU General Use License");
-        copyrightLabel = new JLabel("© August 2021 Garrett Kamila Crayton");
-        imagesLabel = new JLabel("© March 2007 ");
+        titleLabel = new JLabel("Card Simulator");
+        dateLabel = new JLabel("2022 April 19");
+        licenseLabel = new JLabel("MIT License");
+        copyrightLabel = new JLabel("\u00a9 April 2022 Garrett Kamila Crayton");
+        imagesLabel = new JLabel("\u00a9 March 2007 ");
     }
 
     private void createLinks()
     {
         authorLink = new JHyperLink("Garrett Kamila Crayton", "https://www.cs.drexel.edu/~gkc37/");
-        versionLink = new JHyperLink("0.0.0", "https://github.com/onekamila/CardSimulator");
+        versionLink = new JHyperLink("1.0.0", "https://github.com/onekamila/CardSimulator");
         imagesLink = new JHyperLink("Dr. Colin M.L. Burnett", "https://en.wikipedia.org/wiki/User:Cburnett");
     }
 

@@ -1,6 +1,8 @@
 package CardSimulator.GUI;
 
+
 import CardSimulator.CardDeck.Suit;
+import CardSimulator.Driver;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -8,7 +10,11 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 /**
@@ -19,6 +25,8 @@ import java.util.ArrayList;
  */
 public class ImageReader
 {
+    public static String imagePath;
+    
     /**
      * Returns a list of <code>ImageIcon</code>s for all cards in a given suit
      *
@@ -28,6 +36,9 @@ public class ImageReader
      */
     public static ArrayList<ImageIcon> getImages(Suit suit) throws IOException
     {
+        if(imagePath == null)
+            getImagePath();
+        
         ArrayList<ImageIcon> images = new ArrayList<ImageIcon>();
         for(int i = 0; i < 13; i++)
         {
@@ -35,9 +46,9 @@ public class ImageReader
         }
 
         // Get the path of the suit's image dir
-        String imageDirPath = '.' + File.separator + "images" + File.separator + suit.name().toLowerCase();
+        String imageDirPath = imagePath + File.separator + suit.name().toLowerCase();
         File imageDir = new File(imageDirPath);
-
+        
         // Get all image files from the dir
         File[] imageFiles = imageDir.listFiles();
 
@@ -56,6 +67,27 @@ public class ImageReader
         // Return the ArrayList of images
         return images;
     }
+    
+    private static void getImagePath() throws IOException
+    {
+        Path propertiesPath = Paths.get(Driver.class.getResource("conf.properties").toString().substring(6));
+        InputStream properties = Driver.class.getResourceAsStream("conf.properties");
+        Scanner reader = new Scanner(properties);
+    
+    
+        String pathLine = reader.nextLine();
+    
+        String path = pathLine.split("=")[1].strip();
+    
+        path = path.replace("/", File.separator);
+    
+        String fullPath = propertiesPath.toFile().getParentFile().getAbsolutePath() + File.separator + path;
+        fullPath = fullPath.replace("%20", " ");
+        Path imageRootPath = Paths.get(fullPath);
+    
+        imagePath = imageRootPath.toString();
+    }
+    
 
     /**
      * Returns the given image resized to the given dimensions

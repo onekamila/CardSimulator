@@ -6,6 +6,7 @@ import CardSimulator.CardDeck.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -33,13 +34,13 @@ public class CardPanel extends JComponent
      * @param cardDeck the <code>CardSimulator.CardSimulator.CardDeck</code> to base the <code>CardGraphics</code>
      * @throws IOException if an error occurs while trying to read an image file
      */
-    public CardPanel(CardDeck cardDeck) throws IOException
+    public CardPanel(CardDeck cardDeck) throws IOException, URISyntaxException
     {
         init(cardDeck);
     }
 
 
-    private void init(CardDeck cardDeck) throws IOException
+    private void init(CardDeck cardDeck) throws IOException, URISyntaxException
     {
         ArrayList<ImageIcon> imageIcons = new ArrayList<>();
 
