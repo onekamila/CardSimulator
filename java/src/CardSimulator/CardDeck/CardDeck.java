@@ -8,10 +8,11 @@ import java.util.Random;
 
 
 /**
- * Represents a deck of cards
+ * Represents a deck of <code>Card</code>s
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class CardDeck extends ArrayList<Card>
 {
@@ -63,6 +64,12 @@ public class CardDeck extends ArrayList<Card>
         processEvent(shuffleEvent);
     }
 
+    /**
+     * Splits the <code>CardDeck</code> roughly in half. Exact split will not be even, the exact split point will be
+     * random.
+     *
+     * @return a <code>List</code> of two <code>List</code>s of <code>Card</code>s
+     */
     private ArrayList<ArrayList<Card>> splitDeck()
     {
         ArrayList<ArrayList<Card>> halves = new ArrayList<ArrayList<Card>>();

@@ -18,10 +18,11 @@ import java.util.Scanner;
 
 
 /**
- * Class that handles reading all card images.
+ * Class that handles reading all <code>Card</code> images.
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class ImageReader
 {

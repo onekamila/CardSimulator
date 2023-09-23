@@ -9,7 +9,8 @@ import java.awt.*;
  * Represents a hyperlink. When clicked-on, it will open a specific page in the user's browser.
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class JHyperLink extends JLabel
 {

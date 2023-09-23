@@ -5,7 +5,8 @@ package CardSimulator.CardDeck;
  * Represents a playing card
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class Card
 {

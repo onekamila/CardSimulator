@@ -13,10 +13,11 @@ import java.util.HashMap;
 
 
 /**
- * <code>JComponent</code> upon which all <code>CardGraphics</code> are drawn
+ * <code>JComponent</code> upon which all <code>CardGraphic</code>s are drawn
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class CardPanel extends JComponent
 {
@@ -31,7 +32,7 @@ public class CardPanel extends JComponent
     /**
      * Class constructor
      *
-     * @param cardDeck the <code>CardSimulator.CardSimulator.CardDeck</code> to base the <code>CardGraphics</code>
+     * @param cardDeck the <code>CardDeck</code> to base the <code>CardGraphics</code>
      * @throws IOException if an error occurs while trying to read an image file
      */
     public CardPanel(CardDeck cardDeck) throws IOException, URISyntaxException
@@ -99,9 +100,9 @@ public class CardPanel extends JComponent
     }
 
     /**
-     * Update the CardSimulator.CardSimulator.GUI to match the state of the given <code>CardSimulator.CardSimulator.CardDeck</code>
+     * Update the GUI to match the state of the given <code>CardDeck</code>
      *
-     * @param cardDeck the <code>CardSimulator.CardSimulator.CardDeck</code> to match
+     * @param cardDeck the <code>CardDeck</code> to match
      */
     public void update(CardDeck cardDeck)
     {

@@ -5,27 +5,28 @@ import java.nio.charset.Charset;
 
 
 /**
- * Represents a suit of a card
+ * Represents a <code>Suit</code> of a <code>Card</code>
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public enum Suit
 {
     /**
-     * <code>Card</code> with the suit Spades
+     * <code>Card</code> with the <code>Suit</code> Spades
      */
     SPADES('\u2660', 'S'),
     /**
-     * <code>Card</code> with the suit Diamonds
+     * <code>Card</code> with the <code>Suit</code> Diamonds
      */
     DIAMONDS('\u2666', 'D'),
     /**
-     * <code>Card</code> with the suit Clubs
+     * <code>Card</code> with the <code>Suit</code> Clubs
      */
     CLUBS('\u2663', 'C'),
     /**
-     * <code>Card</code> with the suit Hearts
+     * <code>Card</code> with the <code>Suit</code> Hearts
      */
     HEARTS('\u2665', 'H');
 

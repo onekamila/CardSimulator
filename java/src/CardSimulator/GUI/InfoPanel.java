@@ -13,7 +13,8 @@ import java.io.IOException;
  * The "About" panel that displays when the "Info" button is pressed.
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.1
  */
 public class InfoPanel extends JPanel
 {
@@ -31,6 +32,10 @@ public class InfoPanel extends JPanel
      * Copyright © 2021 Garrett Kamila Crayton (*link to Personal Site*)
      * Images © 2007 Dr. Colin M.L. Burnett (*link to Dr. Burnett wiki page*)
      */
+    private static final String PERSONAL_SITE_URL = "https://www.gkcrayton.com/";
+    private static final String PROJECT_VERSION = "1.0.1";
+    private static final String PROJECT_GITHUB_URL = "https://github.com/onekamila/CardSimulator";
+    private static final String BURNETT_SITE_URL = "https://en.wikipedia.org/wiki/User:Cburnett";
 
     protected JLabel iconLabel;
 
@@ -220,9 +225,9 @@ public class InfoPanel extends JPanel
 
     private void createLinks()
     {
-        authorLink = new JHyperLink("Garrett Kamila Crayton", "https://www.cs.drexel.edu/~gkc37/");
-        versionLink = new JHyperLink("1.0.0", "https://github.com/onekamila/CardSimulator");
-        imagesLink = new JHyperLink("Dr. Colin M.L. Burnett", "https://en.wikipedia.org/wiki/User:Cburnett");
+        authorLink = new JHyperLink("Garrett Kamila Crayton", PERSONAL_SITE_URL);
+        versionLink = new JHyperLink(PROJECT_VERSION, PROJECT_GITHUB_URL);
+        imagesLink = new JHyperLink("Dr. Colin M.L. Burnett", BURNETT_SITE_URL);
     }
 
     private void createPanels()

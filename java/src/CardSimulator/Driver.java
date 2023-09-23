@@ -15,7 +15,8 @@ import java.net.URISyntaxException;
  * Simulates shuffling a deck of cards in a realistic fashion
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class Driver
 {

@@ -12,10 +12,11 @@ import java.net.URISyntaxException;
 
 
 /**
- * Controller of the CardSimulator.CardSimulator.GUI. Actually manipulates the CardSimulator.CardSimulator.CardDeck
+ * Controller of the <code>GUI</code>. Actually manipulates the <code>CardDeck</code>
  *
  * @author Garrett Kamila Crayton
- * @version 0.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class Controller
 {
@@ -27,8 +28,8 @@ public class Controller
     /**
      * Class constructor
      *
-     * @param cardDeck the <code>CardSimulator.CardSimulator.CardDeck</code> being modeled
-     * @param gui the <code>CardSimulator.CardSimulator.GUI</code> that is being controlled
+     * @param cardDeck the <code>CardDeck</code> being modeled
+     * @param gui the <code>GUI</code> that is being controlled
      */
     public Controller(CardDeck cardDeck, GUI gui)
     {

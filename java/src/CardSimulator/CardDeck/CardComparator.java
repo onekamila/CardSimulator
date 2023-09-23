@@ -5,14 +5,18 @@ import java.util.Comparator;
 
 
 /**
- * Compares two cards based on suit and rank
+ * Compares two <code>Card</code>s based on <code>Suit</code> and <code>Rank</code>
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class CardComparator implements Comparator<Card>
 {
     @Override
+    /**
+     * Compares the given <code>Card</code>s
+     */
     public int compare(Card card1, Card card2)
     {
         if(card1.suit == card2.suit)

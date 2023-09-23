@@ -15,10 +15,11 @@ import java.net.URISyntaxException;
 
 
 /**
- * The Graphical User Interface (CardSimulator.CardSimulator.GUI) of the simulation
+ * The Graphical User Interface (GUI) of the simulation
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class GUI implements ActionListener
 {

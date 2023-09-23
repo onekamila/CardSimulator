@@ -1,15 +1,15 @@
 package CardSimulator.GUI;
 
-
 import javax.swing.*;
 import java.awt.*;
 
 
 /**
- * Container class of the image for a given Card
+ * Container class of the image for a given <code>Card</code>
  *
  * @author Garrett Kamila Crayton
- * @version 1.0.0
+ * @version 1.0.1
+ * @since 1.0.0
  */
 public class CardGraphic
 {
